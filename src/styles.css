@@ -1429,6 +1429,25 @@ h4 {
 .public-premium #event > div[class*="max-w"] {
   min-height: clamp(520px, 43vw, 610px);
 }
+
+/* Keep the public event navigation on the same midnight-blue header as the role pages. */
+.public-premium > header {
+  border-bottom-color: rgb(255 255 255 / 14%);
+  background: #112f52;
+  box-shadow: 0 5px 16px rgb(12 31 54 / 14%);
+}
+.public-premium header nav { color: rgb(255 255 255 / 88%); }
+.public-premium header nav a:hover { color: #e0c582; }
+.public-premium header > div > button[aria-label="Open site navigation"] {
+  border-color: rgb(255 255 255 / 30%);
+}
+@media (max-width: 767px) {
+  .public-premium header nav {
+    border-bottom-color: rgb(255 255 255 / 14%);
+    background: #112f52;
+    color: rgb(255 255 255 / 88%);
+  }
+}
 .public-premium #event > div[class*="max-w"] {
   padding-block: clamp(3rem, 6vw, 5rem);
 }
@@ -2537,5 +2556,32 @@ h4 {
   .participant-leaderboard { padding-inline: 15px; }
   .participant-progress-row { grid-template-columns: 38px minmax(0,1fr); gap: 10px; }
   .participant-progress-row > small { grid-column: 2; }
+}
+
+/* Give every page header a consistent fine gold edge and restrained gold sheen. */
+.public-premium > header,
+.participant-dashboard > header,
+.organizer-dashboard > header,
+.min-h-screen.bg-\[\#173b67\] > header {
+  border-bottom: 1px solid #c7a35b !important;
+  background-image: linear-gradient(105deg, rgb(211 177 109 / 12%), transparent 42%, rgb(211 177 109 / 7%));
+}
+.public-premium > header,
+.participant-dashboard > header,
+.organizer-dashboard > header { background-color: #112f52; }
+.min-h-screen.bg-\[\#173b67\] > header { border-bottom-color: #c7a35b !important; }
+.min-h-screen > main > header {
+  border-bottom: 1px solid #c7a35b;
+  background-image: linear-gradient(105deg, rgb(211 177 109 / 10%), transparent 55%);
+}
+.public-premium > header > div > button:first-child b { color: #fffdf8 !important; }
+.public-premium > header > div > button:first-child small { color: rgb(255 255 255 / 68%) !important; }
+.public-premium header nav { color: #fffdf8 !important; }
+.public-premium header nav a { color: #fffdf8 !important; }
+.public-premium header nav a:hover { color: #e0c582 !important; }
+.public-premium header nav button:last-child { color: #17243a !important; }
+.public-premium > header > div > button[aria-label="Open site navigation"] { color: #fffdf8 !important; }
+@media (max-width: 767px) {
+  .public-premium > header nav { background-color: #112f52; }
 }
 
